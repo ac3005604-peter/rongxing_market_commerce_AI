@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCart | AI 智慧電商商城</title>
+    <!-- 引入 Tailwind CSS (快速排版工具) -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- 1. 現代化導覽列 (Navbar) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-black text-blue-600 tracking-wider">🛒 SmartCart</span>
+                    <span class="ml-2 px-2 py-0.5 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">AI Powered</span>
+                </div>
+                
+                <!-- 搜尋列 -->
+                <div class="flex-1 max-w-md mx-8 hidden md:block">
+                    <div class="relative">
+                        <input type="text" placeholder="讓 AI 幫你搜尋商品..." class="w-full bg-gray-100 text-sm px-4 py-2 rounded-lg pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+                        <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+                    </div>
+                </div>
+
+                <!-- 功能按鈕區 -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition font-medium">商品瀏覽</a>
+                    <button class="relative p-2 text-gray-600 hover:text-blue-600 transition">
+                        <span class="text-xl">🛒</span>
+                        <!-- 購物車數量紅點 -->
+                        <span class="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-500 rounded-full">0</span>
+                    </button>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition shadow-sm">
+                        會員登入
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. 大橫幅 (Hero Banner) -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                體驗 AI 賦能的未來購物
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                結合大數據與 AI 推薦系統，為你量身打造最精準的電商購物體驗。不再花時間大海撈針。
+            </p>
+            <div class="space-x-4">
+                <button class="bg-white text-blue-600 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition">
+                    立即探索商品
+                </button>
+                <button class="border border-white/40 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/10 transition">
+                    了解 AI 推薦原理
+                </button>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>

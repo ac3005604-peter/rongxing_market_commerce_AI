@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SmartCart | AI 智慧電商商城</title>
+    <!-- 引入 Tailwind CSS (快速排版工具) -->
+    <script src="https://jsdelivr.net"></script>
 </head>
-<body>
-    <h1>這是我的第一個 AI 電商網頁！</h1>。
-    <button>點我進入 AI 商城</button>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- 1. 現代化導覽列 (Navbar) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-black text-blue-600 tracking-wider">🛒 SmartCart</span>
+                    <span class="ml-2 px-2 py-0.5 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">AI Powered</span>
+                </div>
+
+                <!-- 功能按鈕區 -->
+                <div class="flex items-center space-x-6">
+                    <button class="relative p-2 text-gray-600 hover:text-blue-600 transition">
+                        <span class="text-xl">🛒 購物車</span>
+                        <!-- 購物車數量紅點 (給它一個 id 方便用 JS 控制) -->
+                        <span id="cart-count" class="absolute -top-1 -right-3 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-500 rounded-full">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. 商品展示區 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-bold mb-6">今日推薦商品</h2>
+        
+        <!-- 商品卡片 -->
+        <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+            <div class="p-6">
+                <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide">3C 科技</div>
+                <h3 class="block mt-1 text-lg leading-tight font-medium text-black">AI 降噪智慧耳機</h3>
+                <p class="mt-2 text-gray-500 text-sm">搭載最新 AI 動態降噪晶片，完美隔絕環境噪音，享受純淨音質。</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="text-xl font-bold text-gray-900">$3,990</span>
+                    <!-- 加入購物車按鈕 (給它一個 class 方便用 JS 綁定點擊事件) -->
+                    <button class="add-to-cart-btn bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
+                        加入購物車
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. 前端 JavaScript 邏輯 (這就是未來 React Hook 要簡化的事情) -->
+    <script>
+        // 1. 建立一個變數來記住「目前的購物車數量」 (在 React 中這會變成 useState Hook)
+        let count = 0;
+
+        // 2. 抓取網頁上的紅點元素與按鈕元素
+        const cartCountElement = document.getElementById('cart-count');
+        const addToCartButton = document.querySelector('.add-to-cart-btn');
+
+        // 3. 監聽按鈕的點擊事件
+        addToCartButton.addEventListener('click', () => {
+            // 數量加一
+            count = count + 1;
+            // 把新的數量更新到網頁畫面上
+            cartCountElement.textContent = count;
+            
+            alert('成功加入購物車！');
+        });
+    </script>
+
 </body>
 </html>
