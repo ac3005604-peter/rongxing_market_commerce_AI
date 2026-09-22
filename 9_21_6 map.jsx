@@ -22,7 +22,7 @@ function App() {
           <div className="flex justify-between h-16 items-center">
             <div className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-black text-blue-600 tracking-wider">🛒 SmartCart</span>
-              <span className="ml-2 px-2 py-0.5 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">AI Powered</span>
+              <span className="ml-2 px-2 py-0.5 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">AI Powered!!!!</span>
             </div>
             <div class="flex items-center space-x-6">
               <button className="relative p-2 text-gray-600 hover:text-blue-600 transition">
