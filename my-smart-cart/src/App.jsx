@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import ProductCard from './components/ProductCard'
+import AIChatbot from './components/AIChatbot' //
 
 function App() {
   // 💡 2-2 核心改變：初始化購物車時，優先從 LocalStorage 撈取舊資料
@@ -101,6 +102,7 @@ function App() {
         </div>
 
       </main>
+            <AIChatbot /> {/* 👈 點綴在這裡，它就會自動定錨在網頁右下角 */}
     </div>
   )
 }
