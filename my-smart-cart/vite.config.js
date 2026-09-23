@@ -14,8 +14,9 @@ import tailwindcss from '@tailwindcss/vite' // 👈 必須確保有引入這一�
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(), // 👈 必須確保 plugins 陣列裡有加入這一行
+    tailwindcss(), 
   ],
+    base: '/rongxing_market_commerce_AI/', // 👈 務必加上這一行，前後都要有斜線
     server: {
     proxy: {
       // 當前端請求 /api-hf 時，Vite 會自動幫你轉發到 Hugging Face
