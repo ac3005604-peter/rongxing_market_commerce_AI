@@ -1,4 +1,8 @@
 import { useState } from 'react'
+import 'dotenv/config';//讀金鑰
+
+const HF_TOKEN = process.env.AI_API_KEY;
+
 
 function AIChatbot() {
   const [isOpen, setIsOpen] = useState(false)
@@ -57,8 +61,7 @@ function AIChatbot() {
     try {
       setIsLoading(true)
       
-      // 💡 請把下方 "你的HuggingFace免費Token" 替換成你剛剛複製的 hf_... 字串！
-      const HF_TOKEN = "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" 
+   
 
       /*  查詢 Hugging Face 可用的模型清單，這段程式碼可以先註解掉，等你確認連通後再刪掉    
         fetch("/api-hf/models", {
