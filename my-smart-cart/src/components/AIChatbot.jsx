@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import 'dotenv/config';//讀金鑰
-
-const HF_TOKEN = process.env.AI_API_KEY;
-
+// import 'dotenv/config';//讀金鑰
+// const HF_TOKEN = process.env.AI_API_KEY;
+const HF_TOKEN = import.meta.env.VITE_AI_API_KEY;
 
 function AIChatbot() {
   const [isOpen, setIsOpen] = useState(false)
@@ -70,6 +69,8 @@ function AIChatbot() {
         .then(res => res.json())
         .then(data => console.log("📊 當前可用的模型清單：", data));
       */
+
+      console.log("目前的 Token 檢查：", HF_TOKEN); // 測試用
 
       const response = await fetch(
         "/api-hf/chat/completions", // 💡 改用標準的對話路徑
